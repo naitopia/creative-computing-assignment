@@ -1,88 +1,96 @@
-box {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap');
 
 :root {
-  --dark: #222323;
-  --light: #f0f6f0;
-  --border: 1.5px solid #222323;
-  --gap: 20px;
+  --green: #8ab060;
 }
 
-body {
-  background-color: var(--light);
-  color: var(--dark);
-  font-family: 'DM Mono', monospace;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Mono', monospace;
+  background-color: #f2f0e5;
+  color: #212123;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--gap);
-  width: 100%;
-  max-width: 480px;
+  background: #f2f0e5;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+
+
+h1 {
+  font-family: 'Fira Mono', monospace;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #212123;
+  margin-bottom: 20px;
 }
 
 
 .card {
-  width: 100%;
-  background-color: var(--light);
-  border: var(--border);
-  padding: 32px 36px;
-  opacity: 0;
-  transform: translateY(18px);
-  animation: fadeUp 0.5s ease forwards;
+  background-color: #f2f0e5;
+  border: 1.5px solid #e5ceb4;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
 }
 
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.card h1 {
-  font-family: 'DM Mono', monospace;
-  font-size: clamp(1.8rem, 5vw, 2.4rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
+.card:hover {
+  background-color: #c2d368;
+  border-color: var(--green);
 }
 
 
 .card h2 {
-  font-family: 'DM Mono', monospace;
-  font-size: clamp(1.3rem, 4vw, 1.7rem);
-  font-weight: 400;
-  font-style: italic;
-  margin-bottom: 18px;
-  letter-spacing: -0.01em;
-}
-
-.footer {
-  margin-top: 40px;
-  padding: 16px;
-  text-align: left;
-}
-
-.footer a {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  color: var(--dark);
-  text-decoration: none;
-
+  font-family: 'Fira Mono', monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--green);
+  margin: 0 0 14px 0;
 }
 
 
+.card p {
+  font-family: 'Fira Mono', monospace;
+  font-size: 0.78rem;
+  line-height: 1.7;
+  color: #212123;
+  margin: 0 0 12px 0;
+}
 
 
+.card h3 {
+  font-family: 'Fira Mono', monospace;
+  font-size: 0.80rem;
+  font-weight: 700;
+  color: var(--green);
+  margin: 16px 0 8px 0;
+}
+
+.card h3:first-child {
+  margin-top: 0;
+}
+
+
+.card ul {
+  margin: 0 0 12px 0;
+  padding-left: 20px;
+}
+
+.card ul li {
+  font-family: 'Fira Mono', monospace;
+  font-size: 0.78rem;
+  line-height: 1.8;
+  color: #212123;
+}
+
+
+.card strong,
+.me {
+  font-weight: 700;
+  color: var(--green);
+}
 
